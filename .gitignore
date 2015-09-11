@@ -1,1 +1,4 @@
  tmp/cache/assets/development/
+.idea/*
+log/*
+tmp/pids/*
