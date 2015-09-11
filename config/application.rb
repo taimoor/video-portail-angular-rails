@@ -25,5 +25,12 @@ module VedioPortal
     config.assets.paths << Rails.root.join("vendor","assets","bower_components")
     config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official","assets","fonts")
     config.assets.precompile << %r(.*.(?:eot|svg|ttf|woff|woff2)$)
+
+
+    config.angular_templates.module_name    = 'templates'
+    config.angular_templates.ignore_prefix  << %w(templates/)
+    config.angular_templates.inside_paths   = [Rails.root.join('app', 'assets')]
+    config.angular_templates.markups        = %w(erb str)
+    config.angular_templates.htmlcompressor = false
   end
 end
